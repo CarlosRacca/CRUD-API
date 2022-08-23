@@ -14,7 +14,7 @@ class TurnosController extends Controller
      */
     public function index()
     {
-        $turnos = Turnos::all();
+        $turnos = turnos::findAll();
 
         return $turnos;
     }
@@ -37,7 +37,7 @@ class TurnosController extends Controller
      */
     public function store(Request $request)
     {
-        $turnos =  new Turnos();
+        $turnos =  new turnos();
         $turnos->date = $request->date;
         $turnos->time = $request->time;
         $turnos->customer = $request->customer;
@@ -76,7 +76,7 @@ class TurnosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $turnos =  Turnos::findOrFail($request->id);
+        $turnos =  turnos::findOrFail($request->id);
         $turnos->date = $request->date;
         $turnos->time = $request->time;
         $turnos->customer = $request->customer;
@@ -94,7 +94,7 @@ class TurnosController extends Controller
      */
     public function destroy(Request $request,$id)
     {
-        $turnos = Turnos::destroy($request->id);
+        $turnos = turnos::destroy($request->id);
 
         return $turnos;
     }
