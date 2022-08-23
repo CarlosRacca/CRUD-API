@@ -17,6 +17,7 @@ class TurnosController extends Controller
         $turnos = turnos::all();
 
         return $turnos;
+        
     }
 
     /**
