@@ -42,7 +42,7 @@ class TurnosController extends Controller
         $turnos->time = $request->time;
         $turnos->customer = $request->customer;
 
-        $turnos->save();
+        $turnos->save(); 
     }
 
     /**
