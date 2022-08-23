@@ -24,3 +24,5 @@ Route::get('/turnos', [TurnosController::class, 'index']);
 Route::post('/turnos', 'App\Http\Controllers\TurnosController@store');
 Route::put('/turnos/{id}', 'App\Http\Controllers\TurnosController@update');
 Route::delete('/turnos/{id}', 'App\Http\Controllers\TurnosController@destroy');
+
+Route::get('/', [TurnosController::class, 'index']);
