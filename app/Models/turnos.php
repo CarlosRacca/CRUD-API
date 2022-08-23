@@ -9,4 +9,5 @@ class turnos extends Model
 {
     use HasFactory;
     protected $fillable = ['date', 'time', 'customer'];
+    
 }
