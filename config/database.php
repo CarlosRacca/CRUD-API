@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL = parse_url('mysql://bb2768650aada2:5260a6c2@us-cdbr-east-06.cleardb.net/heroku_bd18d1402b4c6a1?reconnect=true');
 
 return [
 
@@ -40,7 +39,7 @@ return [
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
-            'database' => ltrim($DATABASE_URL["path"], "/"),
+            'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],

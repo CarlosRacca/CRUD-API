@@ -14,7 +14,7 @@ class TurnosController extends Controller
      */
     public function index()
     {
-        $turnos = turnos::findAll();
+        $turnos = turnos::all();
 
         return $turnos;
     }
