@@ -14,9 +14,7 @@ class TurnosController extends Controller
      */
     public function index()
     {
-        $turnos = turnos::all()->sort(function ($a, $b) {
-            return ($a->date < $b->date) ? -1 : 1;
-        });
+        $turnos = turnos::orderBy('date')->get();
 
         return $turnos;
 
