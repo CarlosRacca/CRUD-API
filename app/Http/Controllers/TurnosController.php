@@ -17,7 +17,7 @@ class TurnosController extends Controller
         $turnos = turnos::all();
 
         return $turnos;
-        
+
     }
 
     /**
@@ -44,6 +44,8 @@ class TurnosController extends Controller
         $turnos->customer = $request->customer;
 
         $turnos->save(); 
+
+        return $turnos;
     }
 
     /**
