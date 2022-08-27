@@ -38,6 +38,7 @@ class TurnosController extends Controller
      */
     public function store(Request $request)
     {
+        
         $turnos =  new turnos();
         $turnos->date = $request->date;
         $turnos->time = $request->time;
